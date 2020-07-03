@@ -1,0 +1,30 @@
+---
+apiVersion: eventing.knative.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: process-registered-user-trigger
+spec:
+  broker: default
+  filter:
+    attributes:
+      type: org.apache.couchdb.document.update
+  subscriber:
+    ref:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      name: process-registered-user
+---
+apiVersion: eventing.knative.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: process-deleted-user-trigger
+spec:
+  broker: default
+  filter:
+    attributes:
+      type: org.apache.couchdb.document.delete
+  subscriber:
+    ref:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      name: process-deleted-user

@@ -1,0 +1,23 @@
+{
+  "name": "openshift-serverless-nodejs-couchdb",
+  "version": "1.0.0",
+  "description": "``` oc get knativeeventing.operator.knative.dev/knative-eventing \\   -n knative-eventing \\   --template='{{range .status.conditions}}{{printf \"%s=%s\\n\" .type .status}}{{end}}' InstallSucceeded=True Ready=True ```",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnthonyAmanse/openshift-serverless-nodejs-couchdb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnthonyAmanse/openshift-serverless-nodejs-couchdb/issues"
+  },
+  "homepage": "https://github.com/AnthonyAmanse/openshift-serverless-nodejs-couchdb#readme",
+  "dependencies": {
+    "cloudevents-sdk": "^2.0.2",
+    "express": "^4.17.1"
+  }
+}
