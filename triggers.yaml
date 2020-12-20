@@ -1,5 +1,5 @@
 ---
-apiVersion: eventing.knative.dev/v1alpha1
+apiVersion: eventing.knative.dev/v1
 kind: Trigger
 metadata:
   name: process-registered-user-trigger
@@ -14,7 +14,7 @@ spec:
       kind: Service
       name: process-registered-user
 ---
-apiVersion: eventing.knative.dev/v1alpha1
+apiVersion: eventing.knative.dev/v1
 kind: Trigger
 metadata:
   name: process-deleted-user-trigger
